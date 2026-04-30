@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.addEventListener('message', function(event) {
+      if (event.origin === 'https://jstest.authorize.net') {
+        window.parent.postMessage(event.data, '*');
+      }
+    });
+  </script>
+</head>
+<body></body>
+</html>
